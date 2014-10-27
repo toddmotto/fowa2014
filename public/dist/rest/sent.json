@@ -1,0 +1,26 @@
+[
+	{
+		"read": true,
+		"title": "Future of Web Apps",
+		"from": "Todd Motto",
+		"timestamp": 1230912336,
+		"contents": "Test Email from Todd6",
+		"id": 1
+	},
+	{
+		"read": true,
+		"title": "Email Preview",
+		"from": "Todd Motto",
+		"timestamp": 1230912334,
+		"contents": "Test Email from Todd4",
+		"id": 2
+	},
+	{
+		"read": true,
+		"title": "Email Preview",
+		"from": "Todd Motto",
+		"timestamp": 1230912335,
+		"contents": "Test Email from Todd5",
+		"id": 3
+	}
+]

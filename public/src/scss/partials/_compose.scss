@@ -1,0 +1,82 @@
+.compose {
+	background: #fff;
+	
+	width: 500px;
+	height: 300px;
+
+	position: absolute;
+
+	bottom: 0;
+	right: 20px;
+
+	z-index: 999;
+
+	border: 1px solid rgba( 0, 0, 0, 0.1 );
+	border-bottom: none;
+
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	&__header {
+		background: rgba( 0, 0, 0, 0.03 );
+		border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+		padding: 10px 15px;
+		font-size: 16px;
+		font-weight: 500;
+		position: relative;
+
+		&--close {
+			padding: 10px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+		}
+	}
+
+	&__message {
+		position: absolute;
+
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		h4 {
+			font-size: 18px;
+			color: rgba( 0, 0, 0, 0.8 );
+			margin: 0 0 10px;
+		}
+
+		.button {
+			display: block;
+			float: right;
+			padding: 10px 15px;
+			color: #fff;
+			background: #93C26D;
+			text-decoration: none;
+			font-size: 14px;
+			font-weight: bold;
+			border-radius: 3px;
+			margin: 10px;
+		}
+
+		textarea, input {
+			font: Roboto;
+			width: 100%;
+			resize: none;
+			border: none;
+			border-radius: 3px;
+			padding: 10px 15px;
+			font-size: 15px;
+			color: rgba( 0, 0, 0, 0.8 );
+		}
+
+		input {
+			border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+		}
+
+		textarea {
+			height: 115px;
+		}
+	}
+}

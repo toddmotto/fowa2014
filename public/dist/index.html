@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Email app: Future of Web Apps 2014</title>
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <style>.ng-cloak { display: none; }</style>
+    <script>
+    (function(e,t){typeof module!="undefined"&&module.exports?module.exports=t():typeof define=="function"&&define.amd?define(t):this[e]=t()})("$script",function(){function h(e,t){for(var n=0,i=e.length;n<i;++n)if(!t(e[n]))return r;return 1}function p(e,t){h(e,function(e){return!t(e)})}function d(e,t,n){function g(e){return e.call?e():u[e]}function y(){if(!--m){u[o]=1,s&&s();for(var e in f)h(e.split("|"),g)&&!p(f[e],g)&&(f[e]=[])}}e=e[i]?e:[e];var r=t&&t.call,s=r?t:n,o=r?e.join(""):t,m=e.length;return setTimeout(function(){p(e,function t(e,n){if(e===null)return y();e=!n&&!/^https?:\/\//.test(e)&&c?c+e+".js":e;if(l[e]){o&&(a[o]=1),l[e]==2?y():setTimeout(t.bind(null,e,!0),0);return}l[e]=1,o&&(a[o]=1),v(e,y)})},0),d}function v(n,r){var i=e.createElement("script"),u;i.onload=i.onerror=i[o]=function(){if(i[s]&&!/^c|loade/.test(i[s])||u)return;i.onload=i[o]=null,u=1,l[n]=2,r()},i.async=1,i.src=n,t.insertBefore(i,t.lastChild)}var e=document,t=e.getElementsByTagName("head")[0],n="string",r=!1,i="push",s="readyState",o="onreadystatechange",u={},a={},f={},l={},c;return d.get=v,d.order=function(e,t,n){(function r(i){i=e.shift(),e.length?d(i,r):d(i,t,n)})()},d.path=function(e){c=e},d.ready=function(e,t,n){e=e[i]?e:[e];var r=[];return!p(e,function(e){u[e]||r[i](e)})&&h(e,function(e){return u[e]})?t():!function(e){f[e]=f[e]||[],f[e][i](t),n&&n(r)}(e.join("|")),d},d.done=function(e){d([null],e)},d});
+    </script>
+    <script>
+    $script('js/angular.js', function() {
+      $script('js/angular-route.js', function() {
+        $script('js/index.js', function() {
+          $script([
+            'js/router.js',
+            'js/directives/ComposeEmail.js',
+            'js/services/MailboxService.js',
+            'js/controllers/AppCtrl.js',
+            'js/controllers/EmailCtrl.js',
+            'js/controllers/InboxCtrl.js',
+            'js/controllers/SentCtrl.js',
+          ], function() {
+            angular.bootstrap(document.documentElement, ['app']);
+          });
+        });
+      });
+    });
+    </script>
+
+  </head>
+  <body ng-controller="AppCtrl as vm">
+
+    <!-- compose -->
+    <compose-email></compose-email>
+    <!-- /compose -->
+
+    <!-- header -->
+    <header class="header clear">
+      <a href="/" class="header__logo"></a>
+      <div class="search">
+        <i class="search__icon fa fa-search"></i>
+        <input placeholder="Search your email.." type="text" class="search__box" ng-model="vm.searchTerm" ng-change="vm.onSearchChange()" />
+      </div>
+      <div class="user">
+        <div class="user__picture">
+          <img src="img/profile.jpg">
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <!-- nav -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list--item">
+          <a href="" class="nav__list--link nav--compose" ng-click="vm.composeEmail()">
+            <i class="fa fa-plus fa-fw nav__list--icon"></i>
+            Compose Email
+          </a>
+        </li>
+        <li class="nav__list--item">
+          <a href="/#/inbox" class="nav__list--link" ng-class="vm.getClass('/inbox')">
+            <i class="fa fa-inbox fa-fw nav__list--icon"></i>
+            Inbox
+            <span class="nav__list--amount ng-cloak">
+              ({{ vm.unread.count }})
+            </span>
+          </a>
+        </li>
+        <li class="nav__list--item">
+          <a href="/#/sent" class="nav__list--link" ng-class="vm.getClass('/sent')">
+            Sent Mail
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+    <!-- /nav -->
+
+    <!-- view -->
+    <div class="content" ng-view></div>
+    <!-- /view -->
+
+  </body>
+</html>

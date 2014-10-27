@@ -1,0 +1,31 @@
+<div class="mailbox">
+  <ul ng-if="vm.items.length" class="mailbox__list">
+    <li class="mailbox__item mailbox__item--header">
+      <span class="mailbox__item--column mailbox__item--name">
+        Name
+      </span>
+      <span class="mailbox__item--column mailbox__item--preview">
+      &nbsp;
+      </span>
+      <span class="mailbox__item--column mailbox__item--date">
+        Date
+      </span>
+    </li>
+    <li
+      class="mailbox__item"
+      ng-repeat="item in searchTerm = vm.items"
+    >
+      <a class="mailbox__link" href="/#/email/{{ item.id }}">
+        <span class="mailbox__item--column mailbox__item--name">
+          {{ item.from }}
+        </span>
+        <span class="mailbox__item--column mailbox__item--preview">
+          {{ item.contents }}
+        </span>
+        <span class="mailbox__item--column mailbox__item--date">
+          {{ item.timestamp | date:'mediumDate' }}
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>

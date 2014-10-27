@@ -1,0 +1,57 @@
+.header {
+  border-bottom: 1px solid #E9EFEF;
+  height: 100px;
+
+  &__logo {
+    background: url( ../img/logo.png ) no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 60px;
+    display: block;
+    float: left;
+    margin: 20px;
+  }
+}
+
+.user {
+  float: right;
+  margin: 19px 20px 0 0;
+
+  &__picture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+}
+
+.search {
+  border-left: 1px solid rgba( 0, 0, 0, 0.1 );
+  float: left;
+  height: 50px;
+  margin: 25px 0 0 17px;
+  padding: 0 0 0 20px;
+  position: relative;
+
+  &__box {
+    font-size: 18px;
+    border: none;
+    font-family: Roboto;
+
+    padding: 0 0 0 33px;
+    margin-top: 13px;
+  }
+
+  &__icon {
+    font-size: 21px;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    color: rgba( 0, 0, 0, 0.3 );
+  }
+}

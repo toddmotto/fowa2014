@@ -1,0 +1,43 @@
+.mailbox {
+	&__list {
+		margin-top: 15px;
+	}
+
+	&__item {
+		font-size: 16px;
+
+		background: rgba( 0, 0, 0, 0.02 );
+
+		&--active {
+			background: #fff;
+			font-weight: 500;
+		}
+
+		&--column {
+			display: inline-block;
+			padding: 10px 15px;
+		}
+
+		&--name {
+			width: 180px;
+		}
+
+		&--date {
+			float: right;
+			width: 150px;
+		}
+
+		&--header {
+			background: #fff;
+
+	    	font-size: 18px;
+	    	font-weight: 500;
+		}
+	}
+
+	&__link {
+		color: rgba( 0, 0, 0, 0.6 );
+		text-decoration: none;
+		display: block;
+	}
+}

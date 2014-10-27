@@ -1,0 +1,13 @@
+<div class="email">
+	<div class="email__contents">
+		<h2>{{ vm.email.title }}</h2>
+		<h4>From {{ vm.email.from }} on {{ vm.email.timestamp | date:'medium' }}</h4>
+
+		<p>{{ vm.email.contents}}</p>
+	</div>
+	<div class="email__reply">
+		<h4>Send Reply</h4>
+		<textarea placeholder="Click to reply.."></textarea>
+		<a class="button" href="">Send</a>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+{
+  "name": "angularapp",
+  "version": "0.0.1",
+  "description": "AngularJS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toddmotto/fowa2014.git"
+  },
+  "homepage": "https://github.com/toddmotto/fowa2014",
+  "author": "Todd Motto",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^5.10.1",
+    "connect-livereload": "~0.3.2",
+    "express": "~3.4.8",
+    "glob": "^4.0.5",
+    "gulp": "~3.6.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-browserify": "^0.5.0",
+    "gulp-livereload": "^0.3.2",
+    "gulp-markdown": "^1.0.0",
+    "gulp-newer": "^0.3.0",
+    "gulp-notify": "^1.2.5",
+    "gulp-plumber": "~0.5.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "git://github.com/sindresorhus/gulp-ruby-sass#rw/fix-import-sourcemaps",
+    "gulp-tap": "^0.1.1",
+    "gulp-watch": "~0.5.0",
+    "proxy-middleware": "^0.5.0",
+    "reactify": "^0.14.0",
+    "tiny-lr": "0.0.5",
+    "vinyl": "^0.4.3",
+    "vinyl-source-stream": "^0.1.1",
+    "vinyl-transform": "0.0.1"
+  }
+}

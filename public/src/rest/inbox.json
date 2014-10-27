@@ -1,0 +1,42 @@
+[
+	{
+		"read": false,
+		"title": "Email Preview",
+		"from": "The Train Line",
+		"timestamp": 1411976075000,
+		"contents": "Here's your tickets! Order number 1028392",
+		"id": 1
+	},
+	{
+		"read": true,
+		"title": "Email Preview",
+		"from": "Basecamp (Tuts+)",
+		"timestamp": 1411972477000,
+		"contents": "Daily digest",
+		"id": 2
+	},
+	{
+		"read": true,
+		"title": "You've been added to \"Nova.js\" repository",
+		"from": "GitHub",
+		"timestamp": 1411911277000,
+		"contents": "You've been added to \"Nova.js\" repository",
+		"id": 3
+	},
+	{
+		"read": true,
+		"title": "Build Successful",
+		"from": "TravisCI",
+		"timestamp": 1411899157000,
+		"contents": "Build #001 on Conditionizr successful",
+		"id": 4
+	},
+	{
+		"read": false,
+		"title": "Payroll",
+		"from": "Tom Rawling",
+		"timestamp": 1411894472000,
+		"contents": "Attached your company accounts!",
+		"id": 5
+	}
+]
