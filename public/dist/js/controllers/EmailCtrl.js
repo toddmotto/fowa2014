@@ -4,7 +4,7 @@ function EmailCtrl($rootScope, $routeParams, MailboxService, $$getEmail) {
 }
 
 EmailCtrl.resolve = {
-	'$$getEmail': function(MailboxService, $route) {
+	'$$getEmail': function (MailboxService, $route) {
 		return MailboxService.getEmail($route.current.params.id);
 	}
 };

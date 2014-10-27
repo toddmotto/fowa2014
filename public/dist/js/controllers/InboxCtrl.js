@@ -1,11 +1,11 @@
 function InboxCtrl($rootScope, MailboxService, $$getInbox) {
 	var vm = this;
 	vm.items = $$getInbox.data;
-
-  vm.searchTerm = '';
-  $rootScope.$on('search:change', function (evt, data) {
-    vm.searchTerm = data;
-  });
+	vm.searchTerm = '';
+	
+	$rootScope.$on('search:change', function (event, data) {
+		vm.searchTerm = data;
+	});
 }
 
 InboxCtrl.resolve = {

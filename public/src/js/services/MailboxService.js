@@ -1,4 +1,18 @@
+/**
+ * Inject any Services we need
+ * Can't get a $scope instance however
+ */
 function MailboxService ($http) {
+
+	/**
+	 * Business logic layer:
+	 * - Fetch and return copies of data
+	 * - These are singletons
+	 * Don't try do too much inside a Service, such as: var unreadCount = 0;
+	 * No presentational logic, use Controllers only
+	 * to prevent data being persisted and destroyed correctly
+	 * For _performance_ reasons!!
+	 */
 
 	this.getEmail = function( id ) {
 		return $http({

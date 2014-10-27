@@ -1,3 +1,12 @@
+<!--
+
+Avoid:
+<div class="mailbox" ng-controller="MailBoxCtrl">
+- DOM bindings are likely slower than Angular's JS properties in Routing/Directives
+- Don't hardcode. Keep things dynamic with router/directive controller names.
+- Keeps templates/partials free for being used with multiple Controllers
+
+-->
 <div class="mailbox">
   <ul ng-if="vm.items.length" class="mailbox__list">
     <li class="mailbox__item mailbox__item--header">
@@ -13,7 +22,8 @@
     </li>
     <li
       class="mailbox__item"
-      ng-repeat="item in searchTerm = vm.items"
+      ng-class="{ 'mailbox__item--active': !item.read }"
+      ng-repeat="item in searchTerm = vm.items | orderBy: ['read', '-timestamp'] | filter: vm.searchTerm"
     >
       <a class="mailbox__link" href="/#/email/{{ item.id }}">
         <span class="mailbox__item--column mailbox__item--name">
@@ -28,4 +38,5 @@
       </a>
     </li>
   </ul>
+  <div ng-if="!(vm.items | filter:vm.searchTerm).length">No items found</div>
 </div>

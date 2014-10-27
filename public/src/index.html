@@ -1,8 +1,33 @@
 <!doctype html>
+<!--
+
+Use it on the <html> tag for <head> access
+
+For sync files
+<html ng-app="app">
+
+Use angular.bootstrap(document.documentElement, ['app']);
+for loading files async
+-->
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Angular Email app: Future of Web Apps 2014</title>
+    <!--
+    <title ng-bind="title">
+    If you're going to be changing the page title
+    You should use ng-bind to avoid seeing {{ }} in the title tabs
+
+    Why? ng-bind prevents flicker onload from {{ }} braces
+    You might have <p>{{ vm.username }}</p>
+    Workaround: <p ng-bind="vm.username"></p>
+
+    Dynamic XHR views:
+    - You don't have to worry about {{ }} braces showing for
+      Ajax content
+    -->
+    <title>
+      Angular Email app: Future of Web Apps 2014
+    </title>
     <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <style>.ng-cloak { display: none; }</style>
@@ -20,7 +45,7 @@
             'js/controllers/AppCtrl.js',
             'js/controllers/EmailCtrl.js',
             'js/controllers/InboxCtrl.js',
-            'js/controllers/SentCtrl.js',
+            'js/controllers/SentCtrl.js'
           ], function() {
             angular.bootstrap(document.documentElement, ['app']);
           });
@@ -31,6 +56,15 @@
 
   </head>
   <body ng-controller="AppCtrl as vm">
+  <!--
+  Two ways to declare Controllers:
+  1) On a DOM element
+  <body ng-controller="AppCtrl as vm">
+
+  2) In a Directive/Router
+  - ngRoute gives us { controller: 'MainCtrl' }
+  - Directives give us { controller: 'MyDirectiveCtrl' }
+  -->
 
     <!-- compose -->
     <compose-email></compose-email>
